@@ -16,9 +16,7 @@ const links: NavLink[] = [
   { name: "Contact", href: "/contact" },
 ];
 
-interface NavbarProps {}
-
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar = () => {
   const pathname = usePathname();
 
   return (
