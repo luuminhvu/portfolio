@@ -19,7 +19,7 @@ const links: NavLink[] = [
   { name: "Contact", href: "/contact" },
 ];
 
-const MobileNavBar: React.FC = () => {
+const MobileNavBar = () => {
   const pathname = usePathname();
 
   return (
