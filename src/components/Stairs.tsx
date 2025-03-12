@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+
 const stairsAnimation = {
   initial: {
     top: 0,
@@ -11,30 +12,30 @@ const stairsAnimation = {
     top: ["100%", "0%"],
   },
 };
-const reserveIndex = (index: number) => {
+
+const reserveIndex = (index: number): number => {
   const total = 6;
   return total - index - 1;
 };
-const Stairs = () => {
+
+const Stairs: React.FC = () => {
   return (
     <>
-      {[...Array(6)].map((_, index) => {
-        return (
-          <motion.div
-            key={index}
-            className="h-full w-full bg-white relative"
-            variants={stairsAnimation}
-            exit="exit"
-            animate="animate"
-            initial="initial"
-            transition={{
-              duration: 0.4,
-              ease: "easeInOut",
-              delay: reserveIndex(index) * 0.1,
-            }}
-          />
-        );
-      })}
+      {[...Array(6)].map((_, index) => (
+        <motion.div
+          key={index}
+          className="h-full w-full bg-white relative"
+          variants={stairsAnimation}
+          exit="exit"
+          animate="animate"
+          initial="initial"
+          transition={{
+            duration: 0.4,
+            ease: "easeInOut",
+            delay: reserveIndex(index) * 0.1,
+          }}
+        />
+      ))}
     </>
   );
 };

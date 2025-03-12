@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import MobileNavBar from "./MobileNavBar";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">

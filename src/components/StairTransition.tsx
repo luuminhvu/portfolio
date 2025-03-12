@@ -4,7 +4,9 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import Stairs from "./Stairs";
 
-const StairTransition = () => {
+interface StairTransitionProps {}
+
+const StairTransition: React.FC<StairTransitionProps> = () => {
   const pathname = usePathname();
 
   return (
