@@ -22,7 +22,7 @@ const Photos = () => {
             quality={100}
             fill
             alt="My photo"
-            className="object-contain"
+            className="object-contain rounded-full"
           />
         </motion.div>
         <motion.svg
